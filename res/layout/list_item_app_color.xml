@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="horizontal"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:background="?android:attr/activatedBackgroundIndicator"
+              android:paddingLeft="4dp"
+              android:paddingRight="4dp">
+
+    <include
+            layout="@layout/list_item_app"
+            android:layout_weight="10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+
+    <com.sakisds.frozenled.views.ColorSwatch
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center"
+            android:id="@+id/colorswatch"/>
+
+</LinearLayout>

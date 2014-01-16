@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+            android:title="@string/pref_cat_missedcalls"
+            android:key="pref_key_cat_missedcalls">
+        <CheckBoxPreference
+                android:key="pref_missedcalls_handle"
+                android:summary="@string/pref_missedcalls_handle_desc"
+                android:title="@string/pref_missedcalls_handle"
+                android:defaultValue="true" />
+        <com.sakisds.frozenled.preferences.ColorPickerPreference
+                android:key="pref_missedcalls_color"
+                android:dependency="pref_missedcalls_handle"
+                android:title="@string/pref_missedcalls_color"
+                android:defaultValue="-65505"/> <!-- This is red -->
+        <com.sakisds.frozenled.preferences.SeekBarPreference
+                android:key="pref_missedcalls_pulse"
+                android:dependency="pref_missedcalls_handle"
+                android:title="@string/pref_missedcalls_pulse" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_cat_notif"
+        android:key="pref_key_cat_notif">
+        <ListPreference
+            android:title="@string/pref_notif_priority"
+            android:summary="@string/pref_notif_priority_desc"
+            android:entries="@array/pref_notif_priority_list"
+            android:entryValues="@array/pref_notif_priority_values"
+            android:key="pref_key_notif_priority"
+            android:defaultValue="0" />
+        <CheckBoxPreference
+            android:title="@string/pref_notif_ongoing"
+            android:summary="@string/pref_notif_ongoing_desc"
+            android:defaultValue="true"
+            android:key="pref_key_notif_ongoing" />
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/pref_cat_security"
+        android:key="pref_key_cat_security">
+        <Preference android:title="@string/pref_security_access"
+                    android:summary="@string/pref_security_access_desc">
+            <intent android:action="android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS" />
+        </Preference>
+    </PreferenceCategory>
+</PreferenceScreen>

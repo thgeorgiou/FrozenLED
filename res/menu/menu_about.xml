@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+            android:id="@+id/action_contact"
+            android:title="@string/contact_me"
+            android:orderInCategory="1"
+            android:showAsAction="always"/>
+    <!--<item
+            android:id="@+id/action_github"
+            android:title="@string/github"
+            android:orderInCategory="2"
+            android:showAsAction="always"/>-->
+</menu>
